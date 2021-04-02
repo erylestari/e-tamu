@@ -1,0 +1,39 @@
+<%- include ('../partials/header'); -%>
+
+  <main>
+    <div class="jumbotron">
+      <h2>Edit Data Tamu</h2><br>
+      <form action="/tamu/edit/<%= data.id %>" method="post">
+        <div class="form-group mb-4">
+          <label for="namatamu">Nama Tamu</label>
+          <input type="text" class="form-control" id="namatamu" placeholder="Masukkan nama anda" name="namatamu"
+            value="<%= data.namatamu %>" required />
+        </div>
+        <div class="form-group mb-4">
+          <label for="notel">Nomor Telepon</label>
+          <input type="text" class="form-control" id="notel" placeholder="Masukkan nomor telepon" name="notel"
+            value="<%= data.notel %>" required />
+        </div>
+        <div class="form-group mb-4">
+          <label for="instansi">Instansi</label>
+          <input type="text" class="form-control" id="instansi" placeholder="Masukkan nama instansi" name="instansi"
+            value="<%= data.instansi %>" required />
+        </div>
+        <div class="form-group mb-4">
+          <label for="bidang">Bidang</label>
+          <input type="text" class="form-control" id="bidang" placeholder="Masukkan bidang pekerjaan" name="bidang"
+            value="<%= data.bidang %>" required />
+        </div>
+        <div class="form-group mb-4">
+          <label for="keperluan">Keperluan</label>
+          <input type="text" class="form-control" id="keperluan" placeholder="Masukkan keperluan anda" name="keperluan"
+            value="<%= data.keperluan %>" required />
+        </div>
+        <button type="submit" class="btn btn-primary"
+          style="background-color: #111D5E; border-color: #111D5E;;">Edit</button>
+        <a href="/guest"><button type="button" class="btn btn-secondary">Cancel</button></a>
+      </form>
+    </div>
+  </main>
+
+  <%- include ('../partials/footer'); -%>
